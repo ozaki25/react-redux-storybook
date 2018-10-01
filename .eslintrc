@@ -1,0 +1,23 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "max-len": [1, { "code": 100 }],
+    "import/no-extraneous-dependencies": 0,
+    "no-nested-ternary": 0
+  },
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": ["jest"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "/"]
+      }
+    }
+  }
+}
