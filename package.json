@@ -9,7 +9,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.js\"",
     "lint:css": "stylelint \"src/**/*.js\"",
-    "format": "prettier-eslint --write \"src/**/*.js\""
+    "format": "prettier-eslint --write \"src/**/*.js\"",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "react": "^16.5.2",
@@ -31,6 +33,12 @@
     "stylelint": "^9.6.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.4.0"
+    "stylelint-processor-styled-components": "^1.4.0",
+    "@storybook/react": "^4.0.0-alpha.23",
+    "@storybook/addon-actions": "^4.0.0-alpha.23",
+    "@storybook/addon-links": "^4.0.0-alpha.23",
+    "@storybook/addons": "^4.0.0-alpha.23",
+    "@babel/core": "^7.1.2",
+    "babel-loader": "^8.0.4"
   }
 }
