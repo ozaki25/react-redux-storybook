@@ -1,21 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const Container = styled.div`
-  background-color: lavender;
-  height: 100vh;
-  padding: 10px 15px;
-`;
-
-const H1 = styled.h1`
-  font-size: 36px;
-  color: red;
-`;
+import Title from 'src/components/atoms/Title';
 
 const App = () => (
   <Container>
-    <H1>Hello</H1>
+    <Title>HelloWorld</Title>
   </Container>
 );
+
+const Container = styled.div`
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 15px;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+`;
 
 export default App;
