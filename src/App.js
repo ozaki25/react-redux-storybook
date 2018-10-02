@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from 'src/components/atoms/Title';
+import Title from './components/atoms/Title';
 
 const App = () => (
   <Container>
