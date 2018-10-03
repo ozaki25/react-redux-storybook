@@ -1,9 +1,12 @@
 import React from 'react';
 import Container from 'src/components/utils/Container';
+import Title from 'src/components/atoms/Title';
+import TextInput from '../../atoms/TextInput/index';
 
 const TodoList = () => (
   <Container>
-    <p>TODO</p>
+    <Title>TODO</Title>
+    <TextInput />
   </Container>
 );
 
