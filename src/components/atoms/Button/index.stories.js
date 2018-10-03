@@ -15,3 +15,15 @@ stories.add('非活性', () => (
     {text('label', 'ボタン')}
   </Button>
 ));
+
+stories.add('幅広パターン', () => (
+  <Button onClick={action('click')} wide>
+    {text('label', 'ボタン')}
+  </Button>
+));
+
+stories.add('幅広非活性', () => (
+  <Button onClick={action('click')} wide disabled>
+    {text('label', 'ボタン')}
+  </Button>
+));
