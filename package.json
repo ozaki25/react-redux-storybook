@@ -11,7 +11,8 @@
     "lint:css": "stylelint \"src/**/*.js\"",
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "create-component": "create-component-app --config .ccarc.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +41,7 @@
     "@storybook/addons": "^4.0.0-alpha.23",
     "@storybook/react": "^4.0.0-alpha.23",
     "babel-loader": "^8.0.4",
+    "create-component-app": "^1.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.24.0",
