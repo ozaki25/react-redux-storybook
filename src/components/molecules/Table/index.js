@@ -24,6 +24,18 @@ const StyledTd = styled.td`
   vertical-align: top;
 `;
 
+const TableRow = ({ tds }) => (
+  <tr>
+    {tds.map((td, key) => (
+      <StyledTd key={key}>{td}</StyledTd>
+    ))}
+  </tr>
+);
+
+TableRow.propTypes = {
+  tds: PropTypes.arrayOf(PropTypes.node).isRequired,
+};
+
 const Table = ({ header, body }) => (
   <StyledTable>
     <thead>
@@ -31,31 +43,19 @@ const Table = ({ header, body }) => (
         {header.map((th, key) => (
           <StyledTh key={key}>{th}</StyledTh>
         ))}
-        <StyledTh />
-        <StyledTh />
       </tr>
     </thead>
     <tbody>
       {body.map((tr, key) => (
-        <tr key={key}>
-          {tr.map((td, i) => (
-            <StyledTd key={i}>{td}</StyledTd>
-          ))}
-          <StyledTd>
-            <Button>編集</Button>
-          </StyledTd>
-          <StyledTd>
-            <Button>削除</Button>
-          </StyledTd>
-        </tr>
+        <TableRow key={key} tds={tr} />
       ))}
     </tbody>
   </StyledTable>
 );
 
 Table.propTypes = {
-  header: PropTypes.arrayOf(PropTypes.string).isRequired,
-  body: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+  header: PropTypes.arrayOf(PropTypes.node).isRequired,
+  body: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.node)).isRequired,
 };
 
 export default Table;
