@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Button from 'src/components/atoms/Button';
 
 const StyledTable = styled.table`
   border-collapse: collapse;
@@ -54,8 +53,13 @@ const Table = ({ header, body }) => (
 );
 
 Table.propTypes = {
-  header: PropTypes.arrayOf(PropTypes.node).isRequired,
-  body: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.node)).isRequired,
+  header: PropTypes.arrayOf(PropTypes.node),
+  body: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.node)),
+};
+
+Table.defaultProps = {
+  header: [],
+  body: [],
 };
 
 export default Table;
