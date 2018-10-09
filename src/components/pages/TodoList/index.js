@@ -10,7 +10,7 @@ const TodoList = ({ todoList, addTodo, removeTodo }) => (
   <Container>
     <Title>TODO</Title>
     <TextInput />
-    <Button onClick={() => addTodo({ id: Date.now(), content: 'aaa' })} wide>
+    <Button onClick={() => addTodo({ id: String(Date.now()), content: 'aaa' })} wide>
       追加
     </Button>
     <TodoTable todoList={todoList} />

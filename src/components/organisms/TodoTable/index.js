@@ -15,7 +15,7 @@ const TodoTable = ({ todoList }) => (
 TodoTable.propTypes = {
   todoList: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
+      id: PropTypes.string,
       content: PropTypes.string,
     }),
   ),
