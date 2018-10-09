@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Hello from 'src/components/pages/Hello';
-import TodoList from 'src/components/pages/TodoList';
+import TodoList from 'src/containers/TodoList';
 
 export default () => (
   <BrowserRouter>
