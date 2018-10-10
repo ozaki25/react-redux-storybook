@@ -7,7 +7,9 @@ const TodoTable = ({ todoList, removeTodo }) => (
   <Table
     body={todoList.map(todo => [
       todo.content,
-      <Button onClick={() => removeTodo(todo.id)}>削除</Button>,
+      <Button onClick={() => (window.confirm('削除しますか？') ? removeTodo(todo.id) : null)}>
+        削除
+      </Button>,
     ])}
   />
 );
