@@ -1,0 +1,40 @@
+---
+name: Button
+---
+
+import { Playground, PropsTable } from 'docz'
+import Button from '.'
+
+# Button
+
+- ボタンコンポーネント
+
+## Usage
+
+### 通常パターン
+
+<Playground>
+  <Button onClick={alert}>ボタン</Button>
+</Playground>
+
+### 非活性
+
+<Playground>
+  <Button onClick={alert} disabled>ボタン</Button>
+</Playground>
+
+### 幅広パターン
+
+<Playground>
+  <Button onClick={alert} wide>ボタン</Button>
+</Playground>
+
+### 幅広非活性
+
+<Playground>
+  <Button onClick={alert} disabled wide>ボタン</Button>
+</Playground>
+
+## Props
+
+<PropsTable of={Button} />

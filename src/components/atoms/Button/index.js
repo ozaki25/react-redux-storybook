@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.button`
   background-color: #f5f5f5;
@@ -21,5 +22,13 @@ const Button = styled.button`
     cursor: not-allowed;
   }
 `;
+
+Button.propTypes = {
+  wide: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  wide: false,
+};
 
 export default Button;
