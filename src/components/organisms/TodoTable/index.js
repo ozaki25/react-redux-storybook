@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Button from 'src/components/atoms/Button';
 import Table from 'src/components/molecules/Table';
 
-const TodoTable = ({ todoList }) => (
+const TodoTable = ({ todoList, removeTodo }) => (
   <Table
     body={todoList.map(todo => [
       todo.content,
-      <Button onClick={() => alert(todo.id)}>削除</Button>,
+      <Button onClick={() => removeTodo(todo.id)}>削除</Button>,
     ])}
   />
 );
@@ -19,6 +19,7 @@ TodoTable.propTypes = {
       content: PropTypes.string,
     }),
   ),
+  removeTodo: PropTypes.func.isRequired,
 };
 
 TodoTable.defaultProps = {
