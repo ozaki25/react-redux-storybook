@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Container from 'src/components/utils/Container';
 import Title from 'src/components/atoms/Title';
 import TextInput from 'src/components/atoms/TextInput';
 import Button from 'src/components/atoms/Button';
 import TodoTable from 'src/containers/TodoTable';
+import Container from 'src/components/utils/Container';
+import Margin from 'src/components/utils/Margin';
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class TodoList extends React.Component {
         <Button onClick={this.add} wide>
           追加
         </Button>
+        <Margin bottom="20" />
         <TodoTable />
       </Container>
     );
