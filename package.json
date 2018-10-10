@@ -12,7 +12,9 @@
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "create-component": "create-component-app --config .ccarc.json"
+    "create-component": "create-component-app --config .ccarc.json",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,6 +44,7 @@
     "@storybook/react": "^4.0.0-alpha.23",
     "babel-loader": "^8.0.4",
     "create-component-app": "^1.7.0",
+    "docz": "^0.12.5",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.24.0",
