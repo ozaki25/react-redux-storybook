@@ -10,6 +10,33 @@
     "native": false
   },
   "entries": {
+    "src/components/molecules/Table/index.mdx": {
+      "name": "Table",
+      "id": "68a8dc610d93bf20c4544a8e9dfd3a51",
+      "filepath": "src/components/molecules/Table/index.mdx",
+      "link": null,
+      "slug": "src-components-molecules-table-index",
+      "route": "/src-components-molecules-table-index",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "table",
+          "value": "Table"
+        },
+        {
+          "depth": 2,
+          "slug": "usage",
+          "value": "Usage"
+        },
+        {
+          "depth": 2,
+          "slug": "props",
+          "value": "Props"
+        }
+      ]
+    },
     "src/components/atoms/Button/index.mdx": {
       "name": "Button",
       "id": "573b585cf40d0cee6ff552965865a72d",

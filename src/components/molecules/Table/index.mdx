@@ -1,0 +1,27 @@
+---
+name: Table
+---
+
+import { Playground, PropsTable } from 'docz'
+import Table from '.'
+
+# Table
+
+- テーブルコンポーネント
+
+## Usage
+
+<Playground>
+  <Table
+    header={['チーム', '名前', 'ポジション']}
+    body={[
+      ['エンゼルス', '大谷翔平', '投手'],
+      ['日本ハム', '中田翔', '一塁手'],
+      ['カブス', 'ダルビッシュ有', '投手'],
+    ]}
+   />
+</Playground>
+
+## Props
+
+<PropsTable of={Table} />
