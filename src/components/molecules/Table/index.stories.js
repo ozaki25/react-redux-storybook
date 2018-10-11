@@ -6,6 +6,8 @@ import Table from '.';
 
 const stories = storiesOf('molecules/Table', module);
 
+stories.addParameters({ info: { text: 'テーブルコンポーネント' } });
+
 const editButton = <Button onClick={action('edit')}>編集</Button>;
 const removeButton = <Button onClick={action('remove')}>削除</Button>;
 

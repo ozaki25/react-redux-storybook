@@ -6,6 +6,8 @@ import Button from '.';
 
 const stories = storiesOf('atoms/Button', module);
 
+stories.addParameters({ info: { text: 'ボタンコンポーネント' } });
+
 stories.add('通常パターン', () => (
   <Button onClick={action('click')}>{text('label', 'ボタン')}</Button>
 ));
