@@ -1,5 +1,5 @@
+/* @flow */
 import React from 'react';
-import PropTypes from 'prop-types';
 import Title from 'src/components/atoms/Title';
 import TextInput from 'src/components/atoms/TextInput';
 import Button from 'src/components/atoms/Button';
@@ -7,8 +7,17 @@ import TodoTable from 'src/containers/TodoTable';
 import Container from 'src/components/utils/Container';
 import Margin from 'src/components/utils/Margin';
 
-class TodoList extends React.Component {
-  constructor(props) {
+type Todo = {
+  id: string,
+  content: string,
+};
+
+type Props = {
+  addTodo: Todo => void,
+};
+
+class TodoList extends React.Component<Props> {
+  constructor(props: Props) {
     super(props);
     this.input = React.createRef();
   }
@@ -17,7 +26,7 @@ class TodoList extends React.Component {
     const id = Date.now().toString();
     const content = this.input.current.value;
     const { addTodo } = this.props;
-    addTodo({ id, content });
+    addTodo(({ id, content }: Todo));
     this.input.current.value = '';
   };
 
@@ -35,9 +44,5 @@ class TodoList extends React.Component {
     );
   }
 }
-
-TodoList.propTypes = {
-  addTodo: PropTypes.func.isRequired,
-};
 
 export default TodoList;

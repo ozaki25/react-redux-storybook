@@ -1,3 +1,4 @@
+/* @flow */
 import { connect } from 'react-redux';
 import { addTodo } from 'src/modules/todoList';
 import TodoList from 'src/components/pages/TodoList';

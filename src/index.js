@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
@@ -17,4 +18,6 @@ const Root = () => (
   </>
 );
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+const root: any = document.getElementById('root');
+
+ReactDOM.render(<Root />, root);

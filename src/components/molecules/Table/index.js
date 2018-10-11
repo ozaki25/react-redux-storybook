@@ -1,6 +1,6 @@
+/* @flow */
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const StyledTable = styled.table`
   border-collapse: collapse;
@@ -23,7 +23,7 @@ const StyledTd = styled.td`
   vertical-align: top;
 `;
 
-const TableRow = ({ tds }) => (
+const TableRow = ({ tds }: { tds: Array<React.Node> }) => (
   <tr>
     {tds.map((td, key) => (
       <StyledTd key={key}>{td}</StyledTd>
@@ -31,11 +31,12 @@ const TableRow = ({ tds }) => (
   </tr>
 );
 
-TableRow.propTypes = {
-  tds: PropTypes.arrayOf(PropTypes.node).isRequired,
+type Props = {
+  header?: Array<any>,
+  body?: Array<Array<any>>,
 };
 
-const Table = ({ header, body }) => (
+const Table = ({ header, body }: Props) => (
   <StyledTable>
     <thead>
       <tr>
@@ -51,11 +52,6 @@ const Table = ({ header, body }) => (
     </tbody>
   </StyledTable>
 );
-
-Table.propTypes = {
-  header: PropTypes.arrayOf(PropTypes.node),
-  body: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.node)),
-};
 
 Table.defaultProps = {
   header: [],

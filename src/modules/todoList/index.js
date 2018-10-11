@@ -1,3 +1,4 @@
+/* @flow */
 // Actions
 export const ADD = 'TODO_LIST/ADD';
 export const REMOVE = 'TODO_LIST/REMOVE';

@@ -1,3 +1,4 @@
+/* @flow */
 import { connect } from 'react-redux';
 import { removeTodo } from 'src/modules/todoList';
 import TodoTable from 'src/components/organisms/TodoTable';

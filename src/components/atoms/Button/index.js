@@ -1,6 +1,6 @@
+/* @flow */
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const StyledButton = styled.button`
   background-color: #f5f5f5;
@@ -24,12 +24,12 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = props => <StyledButton {...props} />;
-
-Button.propTypes = {
+type Props = {
   /** 横幅いっぱいにするかどうかにするかどうか */
-  wide: PropTypes.bool,
+  wide?: boolean,
 };
+
+const Button = (props: Props) => <StyledButton {...props} />;
 
 Button.defaultProps = {
   wide: false,
