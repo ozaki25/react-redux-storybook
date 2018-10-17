@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Title from 'src/components/atoms/Title';
 import TextInput from 'src/components/atoms/TextInput';
 import Button from 'src/components/atoms/Button';
@@ -34,5 +35,9 @@ class TodoList extends React.Component {
     );
   }
 }
+
+TodoList.propTypes = {
+  addTodo: PropTypes.func.isRequired,
+};
 
 export default TodoList;

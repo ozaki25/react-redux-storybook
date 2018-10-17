@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledTable = styled.table`
   border-collapse: collapse;
@@ -30,6 +31,10 @@ const TableRow = ({ tds }) => (
   </tr>
 );
 
+TableRow.propTypes = {
+  tds: PropTypes.arrayOf(PropTypes.node).isRequired,
+};
+
 const Table = ({ header, body }) => (
   <StyledTable>
     <thead>
@@ -46,5 +51,15 @@ const Table = ({ header, body }) => (
     </tbody>
   </StyledTable>
 );
+
+Table.propTypes = {
+  header: PropTypes.arrayOf(PropTypes.node),
+  body: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.node)),
+};
+
+Table.defaultProps = {
+  header: [],
+  body: [],
+};
 
 export default Table;

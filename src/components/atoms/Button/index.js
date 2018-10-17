@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledButton = styled.button`
   background-color: #f5f5f5;
@@ -24,5 +25,14 @@ const StyledButton = styled.button`
 `;
 
 const Button = props => <StyledButton {...props} />;
+
+Button.propTypes = {
+  /** 横幅いっぱいにするかどうかにするかどうか */
+  wide: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  wide: false,
+};
 
 export default Button;
