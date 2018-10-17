@@ -1,4 +1,4 @@
-/* @flow */
+
 import React from 'react';
 
 const COMPONENT_NAME = ({ children }) => (

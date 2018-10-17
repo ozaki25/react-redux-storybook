@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -24,15 +23,6 @@ const StyledButton = styled.button`
   }
 `;
 
-type Props = {
-  /** 横幅いっぱいにするかどうかにするかどうか */
-  wide?: boolean,
-};
-
-const Button = (props: Props) => <StyledButton {...props} />;
-
-Button.defaultProps = {
-  wide: false,
-};
+const Button = props => <StyledButton {...props} />;
 
 export default Button;

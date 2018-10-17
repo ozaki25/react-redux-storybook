@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Hello from 'src/components/pages/Hello';

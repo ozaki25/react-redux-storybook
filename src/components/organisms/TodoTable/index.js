@@ -1,14 +1,8 @@
-/* @flow */
 import React from 'react';
 import Button from 'src/components/atoms/Button';
 import Table from 'src/components/molecules/Table';
 
-type Props = {
-  todoList?: Array<{ id: string, content: string }>,
-  removeTodo: string => void,
-};
-
-const TodoTable = ({ todoList, removeTodo }: Props) => (
+const TodoTable = ({ todoList, removeTodo }) => (
   <Table
     body={todoList.map(todo => [
       todo.content,
@@ -18,9 +12,5 @@ const TodoTable = ({ todoList, removeTodo }: Props) => (
     ])}
   />
 );
-
-TodoTable.defaultProps = {
-  todoList: [],
-};
 
 export default TodoTable;

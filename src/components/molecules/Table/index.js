@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -23,7 +22,7 @@ const StyledTd = styled.td`
   vertical-align: top;
 `;
 
-const TableRow = ({ tds }: { tds: Array<React.Node> }) => (
+const TableRow = ({ tds }) => (
   <tr>
     {tds.map((td, key) => (
       <StyledTd key={key}>{td}</StyledTd>
@@ -31,12 +30,7 @@ const TableRow = ({ tds }: { tds: Array<React.Node> }) => (
   </tr>
 );
 
-type Props = {
-  header?: Array<any>,
-  body?: Array<Array<any>>,
-};
-
-const Table = ({ header, body }: Props) => (
+const Table = ({ header, body }) => (
   <StyledTable>
     <thead>
       <tr>
@@ -52,10 +46,5 @@ const Table = ({ header, body }: Props) => (
     </tbody>
   </StyledTable>
 );
-
-Table.defaultProps = {
-  header: [],
-  body: [],
-};
 
 export default Table;

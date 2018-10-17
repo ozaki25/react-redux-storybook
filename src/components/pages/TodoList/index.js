@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import Title from 'src/components/atoms/Title';
 import TextInput from 'src/components/atoms/TextInput';
@@ -7,17 +6,8 @@ import TodoTable from 'src/containers/TodoTable';
 import Container from 'src/components/utils/Container';
 import Margin from 'src/components/utils/Margin';
 
-type Todo = {
-  id: string,
-  content: string,
-};
-
-type Props = {
-  addTodo: Todo => void,
-};
-
-class TodoList extends React.Component<Props> {
-  constructor(props: Props) {
+class TodoList extends React.Component {
+  constructor(props) {
     super(props);
     this.input = React.createRef();
   }
@@ -26,7 +16,7 @@ class TodoList extends React.Component<Props> {
     const id = Date.now().toString();
     const content = this.input.current.value;
     const { addTodo } = this.props;
-    addTodo(({ id, content }: Todo));
+    addTodo({ id, content });
     this.input.current.value = '';
   };
 
