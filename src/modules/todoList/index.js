@@ -28,9 +28,9 @@ type TodoAction = typeof addTodo | typeof removeTodo;
 
 const initialState: TodoState = {
   todoList: [
-    { id: '0001', content: 'todoリスト1つ目' },
-    { id: '0002', content: 'todoリスト2つ目' },
-    { id: '0003', content: 'todoリスト3つ目' },
+    // { id: '0001', content: 'todoリスト1つ目' },
+    // { id: '0002', content: 'todoリスト2つ目' },
+    // { id: '0003', content: 'todoリスト3つ目' },
   ],
 };
 
